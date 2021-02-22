@@ -41,8 +41,8 @@ app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 
 // Create Server
-const PORT = 8080 || process.env.PORT;
-const host = "0.0.0.0";
-app.listen(PORT, "0.0.0.0", (req, res) => {
+const PORT = 8080 || parseInt(process.env.PORT);
+const host = parseInt("0.0.0.0");
+app.listen(PORT, host, (req, res) => {
   console.log(`Server is running on PORT - ${PORT}`);
 });
