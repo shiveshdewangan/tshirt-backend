@@ -43,6 +43,6 @@ app.use("/api", orderRoutes);
 // Create Server
 const PORT = 8080 || process.env.PORT;
 const host = "0.0.0.0";
-app.listen(PORT, host, (req, res) => {
+app.listen(PORT, "0.0.0.0", (req, res) => {
   console.log(`Server is running on PORT - ${PORT}`);
 });
