@@ -20,7 +20,7 @@ exports.makePayment = (req, res) => {
       stripe.charges
         .create(
           {
-            amount: amount,
+            amount: amount * 100,
             currency: "usd",
             customer: customer.id,
             receipt_email: token.email,
